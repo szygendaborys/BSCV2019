@@ -338,6 +338,59 @@ navbar {
         .description{
             width:200px;
         }
+        .contact-details-items{
+            display:flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-details-item{
+            align-items: center;
+            text-align: center;
+            justify-content: space-between;
+            margin:10px 0;
+            border-radius:1em;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            width:300px;
+            background-color:#0b2631;
+            color:white;
+            .fab {
+                width: 63px;
+            }
+            i {
+                font-size:2em;
+                padding:10px 15px;
+                box-shadow:1px 1px 5px black;
+                border-right: 1px solid black;
+                border-left:none;
+                background-color:$primary-navbar; 
+                border-radius:15px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            p{
+                padding-right:10px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .swap-shadow{
+                box-shadow:-1px 1px 5px black;
+                border-right:none;
+                border-radius:15px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-left:1px solid black;
+            }
+            
+            &:hover {
+                cursor: pointer;
+            }
+
+        }
     }
     .contact-form{
         .description{
@@ -461,6 +514,12 @@ p {
     }
 }
 
+@media screen and (max-width:767px) {
+    .contact-form{
+        margin-top:1em;
+    }
+}
+
 @media screen and (max-width:605px) {
     .container-home {
         padding:20px 25px;
@@ -507,6 +566,10 @@ p {
         padding-left:0 !important;
         margin-right:0 !important;
         font-size:1.2em !important;
+    }
+    
+    .contact-details, .contact-form {
+        padding:0px 15px !important;
     }
 }
 
