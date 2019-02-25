@@ -254,7 +254,8 @@ navbar {
       flex-direction: column;
       align-content: center;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      margin: 2em 0; }
     .container-contact .contact-details .contact-details-item {
       align-items: center;
       text-align: center;
@@ -293,10 +294,87 @@ navbar {
         cursor: pointer; }
   .container-contact .contact-form .description {
     width: 220px; }
+  .container-contact .contact-form .row {
+    flex-direction: column; }
+  .container-contact .contact-form .infos {
+    margin-top: 2em;
+    font-size: 1em;
+    width: 100%; }
+    .container-contact .contact-form .infos input {
+      border-color: #d8d8d8;
+      background-color: #F5F5F5;
+      padding: 5px 1em;
+      width: 83%;
+      margin-bottom: 1em;
+      box-shadow: 0px 0px 1px black;
+      border-bottom-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px; }
+  .container-contact .contact-form .message div {
+    padding: 0; }
+  .container-contact .contact-form .message textarea {
+    border: 2px inset #d8d8d8;
+    background-color: #F5F5F5;
+    padding: 5px 1em;
+    width: 83%;
+    margin-left: -15px;
+    box-shadow: 0px 0px 1px black;
+    border-bottom: none;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 5px; }
+  .container-contact .contact-form .message button {
+    border: 2px inset #d8d8d8;
+    width: 83%;
+    background-color: #F5F5F5;
+    margin-left: -15px;
+    margin-top: -6px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0;
+    border-top: none;
+    border-top-right-radius: 0;
+    box-shadow: 0px 0px 1px black;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: 200ms ease;
+    margin-bottom: 2em; }
+    .container-contact .contact-form .message button i {
+      margin-left: 10px; }
+    .container-contact .contact-form .message button:hover {
+      background-color: #7C7C7C;
+      color: white;
+      border: 2px solid #7C7C7C;
+      border-top: none;
+      text-shadow: 1px 1px black; }
+
+.navigating-info {
+  color: white;
+  font-size: 1.2em;
+  animation-name: fadeInfo;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
+  .navigating-info__arrows {
+    position: fixed;
+    bottom: 1em;
+    right: 1em; }
+  .navigating-info__scroll {
+    position: fixed;
+    top: 1em;
+    right: 1em; }
+
+@keyframes fadeInfo {
+  0% {
+    opacity: 1; }
+  40% {
+    opacity: 0; }
+  70% {
+    opacity: 1; } }
 
 .content {
   margin-left: 8rem;
-  background-color: black; }
+  background: url("../images/background.jpg") no-repeat center center fixed;
+  background-size: cover; }
 
 .container-box {
   background-color: white;
@@ -307,11 +385,19 @@ navbar {
   display: flex;
   justify-content: center;
   border: 3px solid white;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 50px;
   margin-left: 8rem; }
+  .container-box::-webkit-scrollbar {
+    width: 5px;
+    height: 50px; }
+  .container-box::-webkit-scrollbar-thumb {
+    background: #F25F5C;
+    border-radius: 5em; }
+  .container-box::-webkit-scrollbar-thumb:hover {
+    background: #d65654; }
   .container-box .title {
     width: 100%;
     text-align: center !important;
@@ -385,7 +471,13 @@ p {
 
 @media screen and (max-width: 767px) {
   .contact-form {
-    margin-top: 1em; } }
+    margin-top: 1em; }
+    .contact-form .message input, .contact-form .message textarea, .contact-form .message button {
+      width: 100% !important;
+      margin-left: 0 !important; }
+    .contact-form .infos input {
+      width: 100% !important;
+      margin-left: 15px; } }
 
 @media screen and (max-width: 605px) {
   .container-home {
@@ -452,3 +544,8 @@ p {
     text-align: center;
     padding-left: 0;
     margin-left: auto !important; } }
+
+@media screen and (max-width: 340px) {
+  .contact-details-item {
+    font-size: 0.8em;
+    width: 250px !important; } }

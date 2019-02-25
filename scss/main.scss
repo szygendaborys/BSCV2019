@@ -14,6 +14,8 @@ $primary-navbar: #144458;
 $border: #F25F5C;
 $whatever: #FFE581;
 $navbarWidth: 8rem;
+$formBackground: #F5F5F5;
+$formBorder: rgb(216, 216, 216);
 // Navbar
 
 navbar {
@@ -263,6 +265,7 @@ navbar {
     flex-direction: column;
     display:flex;
     justify-content: flex-start !important;
+
     .description {
         float:right;
         background-color:$border;
@@ -335,6 +338,7 @@ navbar {
     }
     .contact-details{
         padding-left:30px;
+        
         .description{
             width:200px;
         }
@@ -344,6 +348,7 @@ navbar {
             align-content: center;
             align-items: center;
             justify-content: center;
+            margin:2em 0;
         }
         .contact-details-item{
             align-items: center;
@@ -393,17 +398,115 @@ navbar {
         }
     }
     .contact-form{
+
         .description{
             width:220px;
         }
+
+        .row {
+            flex-direction: column;
+        }
+
+        .infos {
+            margin-top:2em;
+            font-size:1em;
+            width:100%;            
+            input {
+                border-color: $formBorder;
+                background-color: $formBackground;
+                padding: 5px 1em;
+                width:83%;
+                margin-bottom:1em;
+                box-shadow: 0px 0px 1px black;
+                border-bottom-left-radius: 15px;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+        }
+
+        .message {
+            div {
+                padding:0;
+            }
+            textarea {
+                border: 2px inset $formBorder;
+                background-color: $formBackground;
+                padding: 5px 1em;
+                width:83%;
+                margin-left:-15px;
+                box-shadow: 0px 0px 1px black;
+                border-bottom: none;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 5px;
+            }
+            button {
+                border: 2px inset $formBorder;
+                width:83%;
+                background-color: $formBackground;
+                margin-left:-15px;
+                margin-top:-6px;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 5px;
+                border-top-left-radius: 0;
+                border-top:none;
+                border-top-right-radius: 0;
+                box-shadow: 0px 0px 1px black;
+                font-weight: bold;
+                font-size:1.2em;
+                transition: 200ms ease;
+                margin-bottom:2em;
+                i {
+                    margin-left:10px;
+                }
+
+                &:hover{
+                    background-color: #7C7C7C;
+                    color:white;
+                    border: 2px solid #7C7C7C;
+                    border-top:none;
+                    text-shadow:1px 1px black;
+                }
+            }
+        }
     }
+}
+
+// NAVIGATING INFOS 
+
+.navigating-info {
+    color:white;
+    font-size:1.2em;
+    animation-name: fadeInfo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    &__arrows {
+        position:fixed;
+        bottom:1em;
+        right:1em;   
+    }
+
+    &__scroll {
+        position:fixed;
+        top:1em;
+        right:1em;
+    }
+}
+
+@keyframes fadeInfo {
+    0% {opacity:1; }
+    40% {opacity:0;}
+    70% {opacity:1;}
+
 }
 
 // GLOBALS
 
 .content {
     margin-left: $navbarWidth;
-    background-color: black;
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 .container-box {
     background-color: white;
@@ -414,11 +517,25 @@ navbar {
     display:flex;
     justify-content: center;
     border: 3px solid white;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 50px;
     margin-left:$navbarWidth;
+
+    &::-webkit-scrollbar {
+        width:5px;
+        height:50px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $border;
+        border-radius: 5em;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgb(214, 86, 84);
+    }
 
     .title {
         width:100%;
@@ -517,6 +634,20 @@ p {
 @media screen and (max-width:767px) {
     .contact-form{
         margin-top:1em;
+
+        .message {
+            input, textarea, button {
+                width:100% !important;
+                margin-left:0 !important;
+            }
+        }
+
+        .infos {
+            input {
+                width:100% !important;
+                margin-left: 15px;
+            }
+        }
     }
 }
 
@@ -626,5 +757,13 @@ p {
     }
 }
 
+}
+
+@media screen and (max-width:340px) {
+    
+.contact-details-item {
+    font-size:0.8em;
+    width:250px !important;
+}
 }
 
