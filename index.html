@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
+
 </head>
 <body>
     
@@ -75,7 +76,7 @@
 
     <!-- CONTENT -->
     <div class="container-fluid content">
-    
+
     <div class="navigating-info">
         <div class="navigating-info__scroll">
             <p>Use scroll (up and down) to scroll the page!</p>
@@ -88,7 +89,7 @@
     <section id="home" class="1 box">    
             <div class="container-home">
                 <p class="introduction">Hello, I'm <span class="my-name">Borys Szygenda</span> <span class="text-right">a future front-end developer.</span></p>
-                <button class="download-cv">Download CV</button>
+                <a href="./Borys 2019.pdf" download><button class="download-cv">Download CV</button></a>
             </div>
     </section>
 
@@ -152,39 +153,39 @@
             
             <div class="container">
                 <div class="row">
-                    <a class="col-md-12 col-lg-6 portfolio-item" href="">
-                        <div class="portfolio-item-desc"><p>Short Description</p></div>
-                        <p class="portfolio-item-description" style="display:none">Short description</p>
-                        <img src="./images/project1.png" alt="Project1.png">
+                    <a class="col-md-12 col-lg-6 portfolio-item" target="_blank" href="https://szygendaborys.github.io/Blog-Template/">
+                        <div class="portfolio-item-desc"><p>Responsive blog layout</p></div>
+                        <p class="portfolio-item-description" style="display:none">Responsive blog layout</p>
+                        <img src="./images/project1.JPG" alt="Project1.JPG">
                     </a>
-                    <a class="col-md-12 col-lg-6 portfolio-item" href="">
-                        <div class="portfolio-item-desc"><p>Short Description</p></div>
-                        <p class="portfolio-item-description" style="display:none">Short description</p>
-                        <img src="./images/project1.png" alt="Project1.png">
+                    <a class="col-md-12 col-lg-6 portfolio-item" target="_blank" href="https://szygendaborys.github.io/react-musicapp/">
+                        <div class="portfolio-item-desc"><p>React Music App</p></div>
+                        <p class="portfolio-item-description" style="display:none">React Music Ap</p>
+                        <img src="./images/project2.JPG" alt="Project2.JPG">
                     </a>                
                 </div>     
                 <div class="row">
-                    <a class="col-md-12 col-lg-6 portfolio-item" href="">
-                        <div class="portfolio-item-desc"><p>Short Description</p></div>
-                        <p class="portfolio-item-description" style="display:none">Short description</p>
-                        <img src="./images/project1.png" alt="Project1.png">
+                    <a class="col-md-12 col-lg-6 portfolio-item" target="_blank" href="https://jhrwekuh.github.io/My-first-webdev-project/">
+                        <div class="portfolio-item-desc"><p>Form Coding Challenge</p></div>
+                        <p class="portfolio-item-description" style="display:none">Form Coding Challenge</p>
+                        <img src="./images/project3.JPG" alt="Project3.JPG">
                     </a>
-                    <a class="col-md-12 col-lg-6 portfolio-item" href="">
-                        <div class="portfolio-item-desc"><p>Short Description</p></div>
-                        <p class="portfolio-item-description" style="display:none">Short description</p>
-                        <img src="./images/project1.png" alt="Project1.png">
+                    <a class="col-md-12 col-lg-6 portfolio-item" target="_blank" href="https://szygendaborys.github.io/Cookie-Clicker/">
+                        <div class="portfolio-item-desc"><p>Cookie Clicker Game</p></div>
+                        <p class="portfolio-item-description" style="display:none">Cookie Clicker Game</p>
+                        <img src="./images/project4.JPG" alt="Project4.JPG">
                     </a>                
                 </div> 
                 <div class="row">
                     <a class="col-md-12 col-lg-6 portfolio-item" href="">
-                        <div class="portfolio-item-desc"><p>Short Description</p></div>
-                        <p class="portfolio-item-description" style="display:none">Short description</p>
-                        <img src="./images/project1.png" alt="Project1.png">
+                        <div class="portfolio-item-desc"><p>This portfolio website</p></div>
+                        <p class="portfolio-item-description" style="display:none">This portfolio website</p>
+                        <img src="./images/project5.JPG" alt="Project5.JPG">
                     </a>
-                    <a class="col-md-12 col-lg-6 portfolio-item" href="">
-                        <div class="portfolio-item-desc"><p>Short Description</p></div>
-                        <p class="portfolio-item-description" style="display:none">Short description</p>
-                        <img src="./images/project1.png" alt="Project1.png">
+                    <a class="col-md-12 col-lg-6 portfolio-item" target="_blank" href="https://szygendaborys.github.io/BS-CV/">
+                        <div class="portfolio-item-desc"><p>My first portfolio website</p></div>
+                        <p class="portfolio-item-description" style="display:none">My first portfolio website</p>
+                        <img src="./images/project6.JPG" alt="Project6.JPG">
                     </a>                
                 </div>            
             </div>
@@ -213,14 +214,14 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    <form class="contact-form">
+                    <form class="contact-form" action="./mail.php" method="POST">
                         <div class="container"><h5 class="description">Or send me an e-mail!</h5></div>
                         <div class="row infos">
-                            <input type="name" placeholder="Enter your name here"> 
-                            <input type="email" placeholder="Enter your e-mail here">
+                            <input type="name" placeholder="Enter your name here" name="name"> 
+                            <input type="email" placeholder="Enter your e-mail here" name="email">
                         </div>
                         <div class="message">
-                            <textarea rows="4" placeholder="Enter your message here"></textarea>
+                            <textarea rows="4" placeholder="Enter your message here" name="message"></textarea>
                             <button class="btn send-message">Send<i class="fas fa-location-arrow"></i></button>
                         </div>
                     </form>
@@ -239,17 +240,8 @@
     1. COMPLETE CONTACT PAGE
         1.2. FORM ON THE RIGHT
         1.3. ATTACH PHP TO IT AND FIND OUT HOW TO USE IT
-    2. CSS THE SLIDEBARS
-        2.1. IF YOU CLICK MULTIPLE LINKS TO SLIDE THE PAGE IT SHOWS ON THE RIGHT
-                REMOVE IT CSS THE MAIN BOX
-        2.2. CONSIDER ALL OF THE SLIDEBARS
     3. ANIMATIONS
         3.1. HOMEPAGE NEEDS TO BE ALIVE
         3.2. SKILLS ONE AS WELL
         3.4. SOME ANIMATIONS TO THE MENU ON HOVER - ROTATING ICONS
-    4. ATTACH THE PROPER LINKS TO ABOUT ME SECTION AND IMG AND LINKS TO PORTFOLIO
-    5. FIND THE PROPER BACKGROUND TO THE PAGE AND MAYBE ANIMATE IT OR ADD SOME LIBRARIES
-    6. ADD THE LINK TO YOUR CV TO DOWNLOAD IT FROM THE HOMEPAGE
-
-
 -->
