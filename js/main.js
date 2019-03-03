@@ -1,5 +1,10 @@
 $(document).ready(() => {
 
+    setTimeout(() => {
+        $('#preloader').fadeOut();
+    }, 2000);
+
+
     let menuCounter = 0;
     let pageCounter = 1;
     let linksNumber = $('.link');
@@ -21,6 +26,11 @@ $(document).ready(() => {
 // custom functions 
 
 function changePage(e) {
+
+        if ($('.'+pageCounter || '.'+(pageCounter-1)).is(':animated')) {
+            return;
+        }
+
         let pageNumber = e.currentTarget.getAttribute('index'); // 1 2 3 
 
         if(pageNumber == pageCounter) {
@@ -80,6 +90,11 @@ function slidePageKey(e) {
         keySlideUsed = true;
     }
 
+    if ($('.'+pageCounter || '.'+(pageCounter-1)).is(':animated')) {
+        return;
+    }
+
+
     if(keyValue==40 && pageCounter < linksNumber.length) { // down arrow slide down
         pageCounter++;
         $('.'+(pageCounter-1)).slideToggle();
@@ -99,6 +114,10 @@ function slidePageKey(e) {
 
 function slidePageScroll() {
         let delta;
+
+        if ($('.'+pageCounter || '.'+(pageCounter-1)).is(':animated')) {
+            return;
+        }
 
         if(mouseFocus == false) {
             if (event.wheelDelta){

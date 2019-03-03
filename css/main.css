@@ -4,6 +4,40 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; }
 
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #144458; }
+  .loader .dot {
+    width: 2em;
+    height: 2em;
+    margin: 5px;
+    transform: scale(0);
+    border-radius: 50px;
+    background-color: #F5F5F5;
+    animation: bounce 1.5s infinite ease-in-out; }
+  .loader #dot1 {
+    animation-delay: 0.2s; }
+  .loader #dot2 {
+    animation-delay: 0.4s; }
+  .loader #dot3 {
+    animation-delay: 0.6s; }
+
+@keyframes bounce {
+  0% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+
 navbar {
   position: fixed;
   z-index: 99;
@@ -449,7 +483,7 @@ p {
   padding-left: 5px; }
 
 @media screen and (max-width: 1007px) {
-  navbar {
+  navbar, .navigating-info {
     display: none; }
   .compact-navbar {
     display: block; }
